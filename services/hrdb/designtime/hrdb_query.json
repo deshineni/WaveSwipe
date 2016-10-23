@@ -1,0 +1,122 @@
+{
+  "name" : "hrdb",
+  "description" : "Queries for hrdb",
+  "queries" : [ {
+    "name" : "EngineeringEmployees",
+    "query" : "select * from EMPLOYEE where DEPTID=1",
+    "comment" : "",
+    "description" : null,
+    "nativeSql" : true,
+    "returnsSingleResult" : false,
+    "update" : false,
+    "queryParams" : [ ],
+    "outputType" : "hrdbEngineeringEmployeesrtnType",
+    "returnTypeMetadata" : { }
+  }, {
+    "name" : "GeneralAndAdminEmployees",
+    "query" : "select * from EMPLOYEE where DEPTID=3",
+    "comment" : "",
+    "description" : null,
+    "nativeSql" : true,
+    "returnsSingleResult" : false,
+    "update" : false,
+    "queryParams" : [ ],
+    "outputType" : "hrdbGeneralAndAdminEmployeesrtnType",
+    "returnTypeMetadata" : { }
+  }, {
+    "name" : "MarketingEmployees",
+    "query" : "select * from EMPLOYEE where DEPTID=2",
+    "comment" : "",
+    "description" : null,
+    "nativeSql" : true,
+    "returnsSingleResult" : false,
+    "update" : false,
+    "queryParams" : [ ],
+    "outputType" : "hrdbMarketingEmployeesrtnType",
+    "returnTypeMetadata" : { }
+  }, {
+    "name" : "NoOfDepartment",
+    "query" : "SELECT COUNT(NAME) FROM DEPARTMENT",
+    "comment" : "",
+    "description" : null,
+    "nativeSql" : true,
+    "returnsSingleResult" : false,
+    "update" : false,
+    "queryParams" : [ ],
+    "outputType" : null,
+    "returnTypeMetadata" : { }
+  }, {
+    "name" : "noOfDepartments",
+    "query" : "SELECT COUNT(NAME) FROM DEPARTMENT",
+    "comment" : "",
+    "description" : null,
+    "nativeSql" : true,
+    "returnsSingleResult" : false,
+    "update" : false,
+    "queryParams" : [ ],
+    "outputType" : "hrdbnoOfDepartmentsrtnType",
+    "returnTypeMetadata" : { }
+  }, {
+    "name" : "NoOfEmployee",
+    "query" : "select count(eid) from employee",
+    "comment" : "",
+    "description" : null,
+    "nativeSql" : true,
+    "returnsSingleResult" : false,
+    "update" : false,
+    "queryParams" : [ ],
+    "outputType" : "hrdbNoOfEmployeertnType",
+    "returnTypeMetadata" : { }
+  }, {
+    "name" : "ProfessionalServicesEmployees",
+    "query" : "select * from EMPLOYEE where DEPTID=5",
+    "comment" : "",
+    "description" : null,
+    "nativeSql" : true,
+    "returnsSingleResult" : false,
+    "update" : false,
+    "queryParams" : [ ],
+    "outputType" : "hrdbProfessionalServicesEmployeesrtnType",
+    "returnTypeMetadata" : { }
+  }, {
+    "name" : "SalesEmployees",
+    "query" : "select * from EMPLOYEE where DEPTID=4",
+    "comment" : "",
+    "description" : null,
+    "nativeSql" : true,
+    "returnsSingleResult" : false,
+    "update" : false,
+    "queryParams" : [ ],
+    "outputType" : null,
+    "returnTypeMetadata" : { }
+  }, {
+    "name" : "SelectedEmployeeID",
+    "query" : "select * from employee where eid=:data",
+    "comment" : "",
+    "description" : null,
+    "nativeSql" : true,
+    "returnsSingleResult" : false,
+    "update" : false,
+    "queryParams" : [ {
+      "paramName" : "data",
+      "paramType" : "java.lang.Integer",
+      "testValue" : null,
+      "systemParamName" : null,
+      "systemParam" : false,
+      "list" : false
+    } ],
+    "outputType" : null,
+    "returnTypeMetadata" : { }
+  }, {
+    "name" : "TotalBudget",
+    "query" : "select sum(budget) from department",
+    "comment" : "",
+    "description" : null,
+    "nativeSql" : true,
+    "returnsSingleResult" : false,
+    "update" : false,
+    "queryParams" : [ ],
+    "outputType" : "hrdbTotalBudgetrtnType",
+    "returnTypeMetadata" : { }
+  } ]
+}

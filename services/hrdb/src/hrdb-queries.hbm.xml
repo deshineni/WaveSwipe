@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <sql-query name="EngineeringEmployees">
+    <![CDATA[
+      select * from EMPLOYEE where DEPTID=1
+    ]]>
+  </sql-query>
+  <sql-query name="GeneralAndAdminEmployees">
+    <![CDATA[
+      select * from EMPLOYEE where DEPTID=3
+    ]]>
+  </sql-query>
+  <sql-query name="MarketingEmployees">
+    <![CDATA[
+      select * from EMPLOYEE where DEPTID=2
+    ]]>
+  </sql-query>
+  <sql-query name="NoOfDepartment">
+    <![CDATA[
+      SELECT COUNT(NAME) FROM DEPARTMENT
+    ]]>
+  </sql-query>
+  <sql-query name="noOfDepartments">
+    <![CDATA[
+      SELECT COUNT(NAME) FROM DEPARTMENT
+    ]]>
+  </sql-query>
+  <sql-query name="NoOfEmployee">
+    <![CDATA[
+      select count(eid) from employee
+    ]]>
+  </sql-query>
+  <sql-query name="ProfessionalServicesEmployees">
+    <![CDATA[
+      select * from EMPLOYEE where DEPTID=5
+    ]]>
+  </sql-query>
+  <sql-query name="SalesEmployees">
+    <![CDATA[
+      select * from EMPLOYEE where DEPTID=4
+    ]]>
+  </sql-query>
+  <sql-query name="SelectedEmployeeID">
+    <![CDATA[
+      select * from employee where eid=:data
+    ]]>
+  </sql-query>
+  <sql-query name="TotalBudget">
+    <![CDATA[
+      select sum(budget) from department
+    ]]>
+  </sql-query>
+</hibernate-mapping>

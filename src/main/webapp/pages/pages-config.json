@@ -1,0 +1,25 @@
+[ {
+  "name" : "Common",
+  "type" : "PARTIAL"
+}, {
+  "name" : "Departments",
+  "type" : "PAGE"
+}, {
+  "name" : "Employees",
+  "type" : "PAGE"
+}, {
+  "name" : "EmployeesProfile",
+  "type" : "PAGE"
+}, {
+  "name" : "Login",
+  "type" : "PAGE"
+}, {
+  "name" : "Main",
+  "type" : "PAGE"
+}, {
+  "name" : "Statistics",
+  "type" : "PAGE"
+}, {
+  "name" : "leftnav",
+  "type" : "PARTIAL"
+} ]

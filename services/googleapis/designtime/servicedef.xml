@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="googleapis" type="RestService" springFile="googleapis.spring.xml">
+    <operation name="invoke">
+        <parameter name="address" typeRef="java.lang.String" isList="false"/>
+        <parameter name="key" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="googleapis.RootResponse" isList="false"/>
+    </operation>
+    <dataobjects>
+        <dataobject javaType="googleapis.bounds" name="bounds" supportsQuickData="false">
+            <element name="southwest" typeRef="googleapis.southwest" isList="false" allowNull="false"/>
+            <element name="northeast" typeRef="googleapis.northeast" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="googleapis.southwest" name="southwest" supportsQuickData="false">
+            <element name="lng" typeRef="java.lang.Double" isList="false" allowNull="false"/>
+            <element name="lat" typeRef="java.lang.Double" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="googleapis.northeast" name="northeast" supportsQuickData="false">
+            <element name="lng" typeRef="java.lang.Double" isList="false" allowNull="false"/>
+            <element name="lat" typeRef="java.lang.Double" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="googleapis.address_componentsEntryItem" name="address_componentsEntryItem" supportsQuickData="false">
+            <element name="long_name" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="types" typeRef="java.lang.String" isList="true" allowNull="false"/>
+            <element name="short_name" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="googleapis.resultsEntryItem" name="resultsEntryItem" supportsQuickData="false">
+            <element name="place_id" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="address_components" typeRef="googleapis.address_componentsEntryItem" isList="true" allowNull="false"/>
+            <element name="formatted_address" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="types" typeRef="java.lang.String" isList="true" allowNull="false"/>
+            <element name="geometry" typeRef="googleapis.geometry" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="googleapis.geometry" name="geometry" supportsQuickData="false">
+            <element name="bounds" typeRef="googleapis.bounds" isList="false" allowNull="false"/>
+            <element name="viewport" typeRef="googleapis.viewport" isList="false" allowNull="false"/>
+            <element name="location_type" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="location" typeRef="googleapis.location" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="googleapis.location" name="location" supportsQuickData="false">
+            <element name="lng" typeRef="java.lang.Double" isList="false" allowNull="false"/>
+            <element name="lat" typeRef="java.lang.Double" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="googleapis.RootResponse" name="RootResponse" supportsQuickData="false">
+            <element name="results" typeRef="googleapis.resultsEntryItem" isList="true" allowNull="false"/>
+            <element name="status" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="googleapis.viewport" name="viewport" supportsQuickData="false">
+            <element name="southwest" typeRef="googleapis.southwest" isList="false" allowNull="false"/>
+            <element name="northeast" typeRef="googleapis.northeast" isList="false" allowNull="false"/>
+        </dataobject>
+    </dataobjects>
+</service>

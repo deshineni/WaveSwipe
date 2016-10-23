@@ -1,0 +1,16 @@
+<wm-partial data-ng-controller="leftnavPageController" name="leftnav" type="left-panel"> 
+    <wm-nav type="pills" layout="stacked" name="nav1"> 
+        <wm-nav-item name="nav_item1"> 
+            <wm-anchor caption="DashBoard" iconclass="glyphicon glyphicon-dashboard" name="anchor1" on-click="Variables.goToPage-Main.invoke()"></wm-anchor> 
+        </wm-nav-item> 
+        <wm-nav-item name="nav_item4"> 
+            <wm-anchor caption="EMPLOYEES" iconclass="glyphicon glyphicon-user" on-click="Variables.goToPage_Employees.invoke()" name="anchor5_1"></wm-anchor> 
+        </wm-nav-item> 
+        <wm-nav-item name="nav_item5"> 
+            <wm-anchor name="anchor7" caption="DEPARTMENTS" on-click="Variables.goToPage_Departments.invoke()" iconclass="fa fa-graduation-cap" iconwidth="20px"></wm-anchor> 
+        </wm-nav-item> 
+        <wm-nav-item name="nav_item4_1"> 
+            <wm-anchor name="anchor6" caption="STATISTICS" iconclass="glyphicon glyphicon-stats" on-click="Variables.goToPage_Statistics.invoke()"></wm-anchor> 
+        </wm-nav-item> 
+    </wm-nav> 
+</wm-partial>

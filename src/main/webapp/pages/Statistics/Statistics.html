@@ -1,0 +1,37 @@
+<wm-page data-ng-controller="StatisticsPageController" name="page1"> 
+    <wm-left-panel content="leftnav" name="left_panel1"></wm-left-panel> 
+    <wm-mobile-navbar name="mobile_navbar1" title="STATISTICS" backbutton="false"></wm-mobile-navbar> 
+    <wm-content name="content1"> 
+        <wm-page-content columnwidth="12" name="page_content1"> 
+            <wm-panel class="panel-primary" name="panel1" title="DEPARTMENT WISE BUDGET" closable="false" collapsible="true"> 
+                <wm-panel-footer name="panel_footer1"></wm-panel-footer> 
+                <wm-chart type="Line" name="linechart" theme="Azure" dataset="bind:Variables.HrdbDepartmentData.dataSet" xaxisdatakey="deptcode" yaxisdatakey="budget" offsetleft="10" tooltips="true" showxaxis="false" showyaxis="false" height="210px" legendtype="classic" yaxislabel="Budget" highlightpoints="true" yaxislabeldistance="3" showlegend="false" fontsize="12" offsetright="10" offsettop="25" offsetbottom="55" linethickness="1px" captions="false"></wm-chart> 
+                <wm-panel-footer name="panel_footer1"></wm-panel-footer> 
+            </wm-panel> 
+            <wm-panel class="panel-primary" name="panel2" title="DEPARTMENT WISE STATISTICS" collapsible="true" expanded="true"> 
+                <wm-chart type="Column" name="columnchart" theme="Retro" dataset="bind:Variables.HrdbDepartmentData.dataSet" xaxisdatakey="deptcode" yaxisdatakey="q1,q2,q3,q4" yaxislabel="Quaterly Statistics" showyaxis="false" showxaxis="true" legendtype="classic" offsetleft="10" yaxislabeldistance="5" showcontrols="false" staggerlabels="false" reducexticks="false" barspacing="0.3" offsetright="10" captions="false"></wm-chart> 
+                <wm-panel-footer name="panel_footer2"></wm-panel-footer> 
+            </wm-panel> 
+            <wm-panel class="panel-primary" name="panel3" title="REVENUE BY DEPARTMENT" collapsible="true" expanded="true"> 
+                <wm-chart type="Pie" name="chart9_1" theme="Flyer" legendtype="classic" dataset="bind:Variables.HrdbDepartmentData.dataSet" xaxisdatakey="name" yaxisdatakey="budget" borderunit="em" paddingunit="em" marginunit="em" offsetright="-9" offsetleft="-9" legendposition="Top"></wm-chart> 
+                <wm-panel-footer name="panel_footer4"></wm-panel-footer> 
+            </wm-panel> 
+            <wm-panel class="panel-primary" name="panel4" title="DEPARTMENTS WISE 1st QUATER" expanded="true" collapsible="true"> 
+                <wm-chart type="Cumulative Line" name="cumulativelinechart" theme="Terrestrial" dataset="bind:Variables.HrdbDepartmentData.dataSet" xaxisdatakey="deptcode" yaxisdatakey="budget" showxaxis="true" showyaxis="false" offsetleft="10" highlightpoints="true" legendtype="classic" captions="false" showcontrols="false" showlegend="false" offsetright="10"></wm-chart> 
+                <wm-panel-footer name="panel_footer5"></wm-panel-footer> 
+            </wm-panel> 
+            <wm-panel class="panel-primary" name="panel5" title="DEPARTMENTS WISE BUDGET" collapsible="true" expanded="true"> 
+                <wm-chart legendtype="classic" type="Bar" name="barchart" theme="GrayScale" dataset="bind:Variables.HrdbDepartmentData.dataSet" xaxisdatakey="deptcode" yaxisdatakey="budget" xaxislabel="Departments" showyaxis="false" offsetleft="55" showxaxis="true" captions="false" showvalues="true" showcontrols="false" barspacing="0.3" showlegend="false"></wm-chart> 
+                <wm-panel-footer name="panel_footer6"></wm-panel-footer> 
+            </wm-panel> 
+            <wm-panel class="panel-primary" name="panel6" title="REVENUE BY DEPARTMENT" collapsible="true" expanded="true"> 
+                <wm-chart type="Donut" name="chart9" theme="Azure" dataset="bind:Variables.HrdbDepartmentData.dataSet" xaxisdatakey="name" yaxisdatakey="budget" legendtype="classic" borderunit="em" paddingunit="em" marginunit="em" fontunit="px" ynumberformat="Exponential" donutratio="0.55" orderby="name:asc" offsetright="-9" offsetleft="-9"></wm-chart> 
+                <wm-panel-footer name="panel_footer7"></wm-panel-footer> 
+            </wm-panel> 
+            <wm-panel class="panel-primary" name="panel7" title="DEPARTMENT WISE STATISTICS" collapsible="true" expanded="true"> 
+                <wm-chart type="Bubble" name="bubblechart" theme="Terrestrial" dataset="bind:Variables.HrdbDepartmentData.dataSet" xaxisdatakey="deptid" yaxisdatakey="q1,q2,q3,q4" bubblesize="name" legendtype="classic" showxdistance="false" showydistance="false" show="true" showlegend="true" tooltips="true" height="210" width="100%" shape="circle" offsetleft="75"></wm-chart> 
+                <wm-panel-footer name="panel_footer8"></wm-panel-footer> 
+            </wm-panel> 
+        </wm-page-content> 
+    </wm-content> 
+</wm-page>
