@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,16 +21,15 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import com.hrdb.service.HrdbProcedureExecutorService;
 import com.wavemaker.runtime.data.model.CustomProcedure;
 import com.wavemaker.runtime.data.exception.QueryParameterMismatchException;
-import com.wordnik.swagger.annotations.*;
-import com.wavemaker.tools.api.core.annotations.WMAccessVisibility;
-import com.wavemaker.tools.api.core.models.AccessSpecifier;
 import com.wordnik.swagger.annotations.Api;
 import com.wordnik.swagger.annotations.ApiOperation;
 import com.wordnik.swagger.annotations.ApiParam;
+import com.wavemaker.tools.api.core.annotations.WMAccessVisibility;
+import com.wavemaker.tools.api.core.models.AccessSpecifier;
 
 @RestController(value = "Hrdb.ProcedureExecutionController")
-@RequestMapping("/hrdb/procedureExecutor")
 @Api(value = "ProcedureExecutionController", description = "Controller class for procedure execution")
+@RequestMapping("/hrdb/procedureExecutor")
 public class ProcedureExecutionController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ProcedureExecutionController.class);
@@ -37,8 +37,8 @@ public class ProcedureExecutionController {
     @Autowired
     private HrdbProcedureExecutorService procedureService;
 
-    @RequestMapping(value = "/procedure/execute/wm_custom", method = RequestMethod.POST)
     @ApiOperation(value = "Process request to execute custom Procedure")
+    @RequestMapping(value = "/procedure/execute/wm_custom", method = RequestMethod.POST)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
     public List<Object> executeWMCustomProcedure(@RequestBody CustomProcedure procedure) {
         List<Object> result = procedureService.executeWMCustomProcedure(procedure);

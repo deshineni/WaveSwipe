@@ -1,46 +1,46 @@
-<wm-page data-ng-controller="MainPageController" name="page1"> 
-    <wm-left-panel content="leftnav" columnwidth="2" name="left_panel1"></wm-left-panel> 
-    <wm-mobile-navbar name="mobile_navbar1" title="DASHBOARD" backbutton="false"></wm-mobile-navbar> 
-    <wm-content name="content1"> 
-        <wm-page-content columnwidth="12" name="page_content1"> 
-            <wm-layoutgrid name="layoutgrid2"> 
-                <wm-gridrow name="gridrow3" paddingunit="em"> 
-                    <wm-gridcolumn columnwidth="6" paddingleft=".07" paddingright=".15" paddingunit="em" class="col-xs-6" name="gridcolumn5"> 
-                        <wm-tile paddingtop="1.5" paddingbottom=".25" paddingunit="em" backgroundcolor="#F86C6B" name="tile5" on-click="Variables.goToPage_Departments.invoke()" height="100pt" horizontalalign="center" color="#ffffff"> 
-                            <wm-icon iconclass="fa fa-globe" iconsize="3.0em" name="icon5"></wm-icon> 
-                            <wm-label textalign="center" caption="Departments" class="text-uppercase h4" name="label9" width="100%"></wm-label> 
-                            <wm-label width="100%" caption="bind:Variables.HrdbNoOfDepartment.dataSet.content[$i].C1" class="h3" name="label10" margintop="0"></wm-label> 
-                        </wm-tile> 
-                    </wm-gridcolumn> 
-                    <wm-gridcolumn columnwidth="6" paddingleft=".07" paddingright=".15" paddingunit="em" class="col-xs-6" name="gridcolumn6"> 
-                        <wm-tile paddingtop="1.5" paddingbottom=".25" paddingunit="em" backgroundcolor="#63C2DE" name="tile6" height="100pt" horizontalalign="center" color="#ffffff"> 
-                            <wm-icon iconclass="fa fa-money" iconsize="3.0em" name="icon2"></wm-icon> 
-                            <wm-label textalign="center" caption="budget" class="text-uppercase h4" name="label11" width="100%"></wm-label> 
-                            <wm-label width="100%" caption="bind:'$'+Variables.HrdbTotalBudget.dataSet.content[$i].C1" class="h3" name="label12" margintop="0"></wm-label> 
-                        </wm-tile> 
-                    </wm-gridcolumn> 
-                </wm-gridrow> 
-                <wm-gridrow name="gridrow11" paddingright="0.5" paddingleft="0.5"> 
-                    <wm-gridcolumn columnwidth="6" paddingleft=".07" paddingright=".15" paddingunit="em" class="col-xs-6" name="gridcolumn29"> 
-                        <wm-tile paddingtop="1.5" paddingbottom=".25" paddingunit="em" backgroundcolor="#F8CB00" height="100pt" name="tile8" on-click="Variables.goToPage_Employees.invoke()" horizontalalign="center" color="#ffffff"> 
-                            <wm-icon iconclass="fa fa-group" iconsize="3.0em" name="icon6"></wm-icon> 
-                            <wm-label textalign="center" caption="Employees" class="text-uppercase h4" name="label17" width="100%"></wm-label> 
-                            <wm-label width="100%" textalign="center" caption="bind:Variables.HrdbNoOfEmployee.dataSet.content[$i].C1" class="h3" margintop="0" fontunit="em" name="label18" height="24" paddingunit="em"></wm-label> 
-                        </wm-tile> 
-                    </wm-gridcolumn> 
-                    <wm-gridcolumn columnwidth="6" paddingleft=".07" paddingright=".15" paddingunit="em" class="col-xs-6" name="gridcolumn32"> 
-                        <wm-tile paddingtop="1.2" paddingbottom=".25" paddingunit="em" backgroundcolor="#4DBD74" height="100pt" name="tile9" horizontalalign="center" color="#ffffff" overflow="auto"> 
-                            <wm-icon iconclass="glyphicon glyphicon-ok" iconsize="3.0em" name="icon7"></wm-icon> 
-                            <wm-label textalign="center" caption="Messages" class="text-uppercase h4" name="label19" width="100%"></wm-label> 
-                            <wm-label width="100%" textalign="center" caption="100" class="h3" margintop="0" fontunit="em" name="label20" paddingunit="em"></wm-label> 
-                        </wm-tile> 
-                    </wm-gridcolumn> 
-                </wm-gridrow> 
-            </wm-layoutgrid> 
-            <wm-panel class="panel-primary" name="panel1" title="REVENUE BY DEPARTMENT"> 
-                <wm-panel-footer name="panel_footer1"></wm-panel-footer> 
-                <wm-chart type="Pie" name="chart2" theme="Retro" legendtype="classic" dataset="bind:Variables.HrdbDepartmentData.dataSet" xaxisdatakey="name" yaxisdatakey="budget"></wm-chart> 
-            </wm-panel> 
-        </wm-page-content> 
-    </wm-content> 
+<wm-page data-ng-controller="MainPageController" name="page1">
+    <wm-left-panel content="leftnav" columnwidth="2" name="left_panel1"></wm-left-panel>
+    <wm-mobile-navbar name="mobile_navbar1" title="DASHBOARD" backbutton="false"></wm-mobile-navbar>
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-layoutgrid name="layoutgrid2">
+                <wm-gridrow name="gridrow3" paddingunit="em">
+                    <wm-gridcolumn columnwidth="6" class="col-xs-6" name="gridcolumn5" padding="unset .15em unset .07em">
+                        <wm-tile backgroundcolor="#F86C6B" name="tile5" on-click="Variables.goToPage_Departments.invoke()" height="100pt" horizontalalign="center" color="#ffffff" padding="1.5em unset .25em unset">
+                            <wm-icon iconclass="fa fa-home" iconsize="3.0em" name="icon5"></wm-icon>
+                            <wm-label textalign="center" caption="Home Loans" class="text-uppercase h4" name="label9" width="100%"></wm-label>
+                            <wm-label width="100%" caption="bind:Variables.HrdbNoOfDepartment.dataSet.content[$i].C1" class="h3" name="label10" margin="0px unset unset unset"></wm-label>
+                        </wm-tile>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" class="col-xs-6" name="gridcolumn6" padding="unset .15em unset .07em">
+                        <wm-tile backgroundcolor="#63C2DE" name="tile6" height="100pt" horizontalalign="center" color="#ffffff" padding="1.5em unset .25em unset">
+                            <wm-icon iconclass="fa fa-money" iconsize="3.0em" name="icon2"></wm-icon>
+                            <wm-label textalign="center" caption="Personal Loans" class="text-uppercase h4" name="label11" width="100%"></wm-label>
+                            <wm-label width="100%" caption="bind:'$'+Variables.HrdbTotalBudget.dataSet.content[$i].C1" class="h3" name="label12" margin="0px unset unset unset"></wm-label>
+                        </wm-tile>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow11" padding="unset 0.5px">
+                    <wm-gridcolumn columnwidth="6" class="col-xs-6" name="gridcolumn29" padding="unset .15em unset .07em">
+                        <wm-tile backgroundcolor="#F8CB00" height="100pt" name="tile8" on-click="Variables.goToPage_Employees.invoke()" horizontalalign="center" color="#ffffff" padding="1.5em unset .25em unset">
+                            <wm-icon iconclass="fa fa-book" iconsize="3.0em" name="icon6"></wm-icon>
+                            <wm-label textalign="center" caption="Student Loans" class="text-uppercase h4" name="label17" width="100%"></wm-label>
+                            <wm-label width="100%" textalign="center" caption="bind:Variables.HrdbNoOfEmployee.dataSet.content[$i].C1" class="h3" fontunit="em" name="label18" height="24" margin="0px unset unset unset"></wm-label>
+                        </wm-tile>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" class="col-xs-6" name="gridcolumn32" padding="unset .15em unset .07em">
+                        <wm-tile backgroundcolor="#4DBD74" height="100pt" name="tile9" horizontalalign="center" color="#ffffff" overflow="auto" padding="1.2em unset .25em unset">
+                            <wm-icon iconclass="wi wi-drive-eta" iconsize="3.0em" name="icon7"></wm-icon>
+                            <wm-label textalign="center" caption="Auto Loans" class="text-uppercase h4" name="label19" width="100%"></wm-label>
+                            <wm-label width="100%" textalign="center" caption="100" class="h3" fontunit="em" name="label20" margin="0px unset unset unset"></wm-label>
+                        </wm-tile>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-panel class="panel-primary" name="panel1" title="REVENUE BY DEPARTMENT">
+                <wm-panel-footer name="panel_footer1"></wm-panel-footer>
+                <wm-chart type="Pie" name="chart2" theme="Retro" legendtype="classic" dataset="bind:Variables.HrdbDepartmentData.dataSet" xaxisdatakey="name" yaxisdatakey="budget"></wm-chart>
+            </wm-panel>
+        </wm-page-content>
+    </wm-content>
 </wm-page>

@@ -1,0 +1,67 @@
+<wm-page data-ng-controller="oauthPageController" name="page1">
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-label name="label4" caption="Sign in" class="h2" padding="unset unset unset 0.8em"></wm-label>
+            <wm-login name="login1" padding="unset 0.5em">
+                <wm-layoutgrid name="layoutgrid1">
+                    <wm-gridrow name="gridrow1">
+                        <wm-gridcolumn name="gridcolumn1">
+                            <wm-text placeholder="Email" name="usernametext" class="app-login-username" updateon="default" height="40" borderstyle="solid" margin="1px unset 0.5px unset"></wm-text>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow2">
+                        <wm-gridcolumn name="gridcolumn2">
+                            <wm-text type="password" name="passwordtext" placeholder="Password" class="app-login-password" updateon="default" height="40" borderstyle="solid" margin="0.5px unset 1px unset"></wm-text>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                </wm-layoutgrid>
+                <wm-button type="submit" caption="Sign in" width="100%" class="app-login-button btn-primary btn-lg" name="button5" margin="1em unset unset unset"></wm-button>
+            </wm-login>
+            <wm-layoutgrid name="layoutgrid1" paddingunit="em">
+                <wm-gridrow name="gridrow5">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn10" horizontalalign="center" padding="1em">
+                        <wm-label caption="Not a member?" class="app-login-remembermetext pull-left" name="label7" textalign="right" width="50%" margin="0em unset"></wm-label>
+                        <wm-anchor name="anchor2" caption="Create an account" width="50%" textalign="left"></wm-anchor>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow1">
+                    <wm-gridcolumn columnwidth="5" name="gridcolumn1" class="col-xs-5">
+                        <hr width="100%" color="#c6cccc">
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="2" name="gridcolumn2" horizontalalign="left" class="col-xs-2">
+                        <wm-layoutgrid name="layoutgrid1" paddingunit="em">
+                            <wm-gridrow name="gridrow1">
+                                <wm-gridcolumn columnwidth="3" name="gridcolumn1" class="col-xs-3">
+                                    <hr width="100%" color="#c6cccc">
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn1" class="col-xs-6">
+                                    <wm-container class="img-circle" name="container4_1" width="2.6em" horizontalalign="center" backgroundcolor="#c6cccc" height="2.6em" margin="0.5em unset unset unset">
+                                        <wm-label name="label3" textalign="center" caption="or" color="#ffffff" padding="0.5em unset unset unset"></wm-label>
+                                    </wm-container>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="3" name="gridcolumn1" class="col-xs-3">
+                                    <hr width="100%" color="#c6cccc">
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="5" name="gridcolumn3" class="col-xs-5">
+                        <hr width="100%" color="#c6cccc">
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow6">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn12" padding="1em">
+                        <wm-button caption="Sign in with Facebook" type="button" name="button2" backgroundcolor="#3E60AA" color="#ffffff" fontsize="1" fontunit="em" fontweight="bold" iconclass="fa fa-facebook-official" iconwidth="1.5em" iconmargin="0" class="app-login-button btn-lg"
+                        width="100%" margin="0.7em unset unset unset"></wm-button>
+                        <wm-label name="label4_1" caption="Its easy to join and we'll never post to facebook without your permission." class="h5" margin="0.5em unset unset unset"></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow7">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn11">
+                        <wm-button class="btn-default" caption="Sign in with Google" type="button" margin="unset 0.5em" name="button3" iconclass="fa fa-google" iconwidth="1.5em" width="100%"></wm-button>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-page-content>
+    </wm-content>
+</wm-page>

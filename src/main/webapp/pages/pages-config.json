@@ -1,25 +1,37 @@
 [ {
   "name" : "Common",
-  "type" : "PARTIAL"
+  "type" : "PARTIAL",
+  "params" : [ ]
 }, {
   "name" : "Departments",
-  "type" : "PAGE"
+  "type" : "PAGE",
+  "params" : [ ]
 }, {
   "name" : "Employees",
-  "type" : "PAGE"
+  "type" : "PAGE",
+  "params" : [ ]
 }, {
   "name" : "EmployeesProfile",
-  "type" : "PAGE"
+  "type" : "PAGE",
+  "params" : [ ]
 }, {
   "name" : "Login",
-  "type" : "PAGE"
+  "type" : "PAGE",
+  "params" : [ ]
 }, {
   "name" : "Main",
-  "type" : "PAGE"
+  "type" : "PAGE",
+  "params" : [ ]
 }, {
   "name" : "Statistics",
-  "type" : "PAGE"
+  "type" : "PAGE",
+  "params" : [ ]
 }, {
   "name" : "leftnav",
-  "type" : "PARTIAL"
+  "type" : "PARTIAL",
+  "params" : [ ]
+}, {
+  "name" : "oauth",
+  "type" : "PAGE",
+  "params" : [ ]
 } ]
