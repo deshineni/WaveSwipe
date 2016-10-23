@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="FinGenie" type="DataService" springFile="FinGenie.spring.xml">
+    <dataobjects>
+        <dataobject javaType="com.wavemaker.apps.mobile.fingenie.fingenie.Bank">
+            <element name="bankId" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="bankName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="email" typeRef="java.lang.String" allowNull="true"/>
+            <element name="lastUpdated" typeRef="java.util.Date" allowNull="true"/>
+            <element name="offers" typeRef="com.wavemaker.apps.mobile.fingenie.fingenie.Offer" isList="true" allowNull="true"/>
+            <element name="phoneNum" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.wavemaker.apps.mobile.fingenie.fingenie.Offer">
+            <element name="amount" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="annualFee" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="bank" typeRef="com.wavemaker.apps.mobile.fingenie.fingenie.Bank" allowNull="true"/>
+            <element name="bankId" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="downpayment" typeRef="java.lang.Float" allowNull="true"/>
+            <element name="minInt" typeRef="java.lang.Float" allowNull="true"/>
+            <element name="offerActive" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="offerEndDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="offerFeedbacks" typeRef="com.wavemaker.apps.mobile.fingenie.fingenie.OfferFeedback" isList="true" allowNull="true"/>
+            <element name="offerId" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="offerStartDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="offerType" typeRef="com.wavemaker.apps.mobile.fingenie.fingenie.OfferType" allowNull="true"/>
+            <element name="offerTypeId" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="originationFee" typeRef="java.lang.String" allowNull="true"/>
+            <element name="prePaymentPenalty" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="rating" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="tenure" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.wavemaker.apps.mobile.fingenie.fingenie.OfferFeedback">
+            <element name="feedback" typeRef="java.lang.String" allowNull="true"/>
+            <element name="offer" typeRef="com.wavemaker.apps.mobile.fingenie.fingenie.Offer" allowNull="true"/>
+            <element name="offerFeedbackId" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="offerId" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="rating" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userId" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="users" typeRef="com.wavemaker.apps.mobile.fingenie.fingenie.Users" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.wavemaker.apps.mobile.fingenie.fingenie.OfferType">
+            <element name="offerType" typeRef="java.lang.String" allowNull="true"/>
+            <element name="offerTypeId" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="offers" typeRef="com.wavemaker.apps.mobile.fingenie.fingenie.Offer" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.wavemaker.apps.mobile.fingenie.fingenie.Session">
+            <element name="adid" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ipAddress" typeRef="java.lang.String" allowNull="true"/>
+            <element name="mac" typeRef="java.lang.String" allowNull="true"/>
+            <element name="os" typeRef="java.lang.String" allowNull="true"/>
+            <element name="sessionId" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="sessionStartTime" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userId" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="users" typeRef="com.wavemaker.apps.mobile.fingenie.fingenie.Users" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.wavemaker.apps.mobile.fingenie.fingenie.Users">
+            <element name="age" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="annualSalary" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="city" typeRef="java.lang.String" allowNull="true"/>
+            <element name="dob" typeRef="java.util.Date" allowNull="true"/>
+            <element name="email" typeRef="java.lang.String" allowNull="true"/>
+            <element name="firstName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="gender" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="lastName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="location" typeRef="java.lang.String" allowNull="true"/>
+            <element name="married" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="offerFeedbacks" typeRef="com.wavemaker.apps.mobile.fingenie.fingenie.OfferFeedback" isList="true" allowNull="true"/>
+            <element name="ownHouse" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="phoneNum" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="pincode" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="salaried" typeRef="java.util.Date" allowNull="true"/>
+            <element name="sessions" typeRef="com.wavemaker.apps.mobile.fingenie.fingenie.Session" isList="true" allowNull="true"/>
+            <element name="userId" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.wavemaker.runtime.data.expression.QueryFilter">
+            <element name="attributeName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="attributeType" typeRef="java.lang.String" allowNull="true"/>
+            <element name="attributeValue" allowNull="true"/>
+            <element name="filterCondition" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.wavemaker.runtime.data.model.CustomProcedure">
+            <element name="procedureParams" typeRef="com.wavemaker.runtime.data.model.CustomProcedureParam" isList="true" allowNull="true"/>
+            <element name="procedureStr" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.wavemaker.runtime.data.model.CustomQuery">
+            <element name="nativeSql" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="queryParams" typeRef="com.wavemaker.runtime.data.model.CustomQueryParam" isList="true" allowNull="true"/>
+            <element name="queryStr" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+    </dataobjects>
+</service>

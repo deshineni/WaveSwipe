@@ -1,1 +1,30 @@
-{ }
+{
+  "navigationVariable1" : {
+    "_id" : "wm-navigationVariable1-wm.NavigationVariable-1477220454386",
+    "name" : "navigationVariable1",
+    "owner" : "Page",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ {
+      "target" : "pageName",
+      "value" : "Login",
+      "type" : "list"
+    } ],
+    "operation" : "gotoPage",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "navigationVariable2" : {
+    "_id" : "wm-navigationVariable2-wm.NavigationVariable-1477220592099",
+    "name" : "navigationVariable2",
+    "owner" : "Page",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ {
+      "target" : "pageName",
+      "value" : "Departments",
+      "type" : "list"
+    } ],
+    "operation" : "gotoPage",
+    "dataSet" : [ ],
+    "pageTransitions" : "slide"
+  }
+}
