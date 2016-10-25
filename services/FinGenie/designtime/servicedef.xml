@@ -1,32 +1,93 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="FinGenie" type="DataService" springFile="FinGenie.spring.xml">
+    <operation operationType="nativequery" name="FinGenieOfferDetails">
+        <parameter name="data" typeRef="java.lang.Integer" isList="false"/>
+        <return typeRef="FinGenieFinGenieOfferDetailsrtnType" isList="false"/>
+    </operation>
+    <operation operationType="nativequery" name="ExecuteHomeLoans">
+        <return typeRef="FinGenieExecuteHomeLoansrtnType" isList="false"/>
+    </operation>
+    <operation operationType="nativequery" name="SelectedOfferDetails">
+        <parameter name="data" typeRef="java.lang.Integer" isList="false"/>
+        <return isList="false"/>
+    </operation>
+    <operation operationType="nativequery" name="ExecuteHomeLoans">
+        <return typeRef="FinGenieExecuteHomeLoansrtnType" isList="false"/>
+    </operation>
+    <operation operationType="nativequery" name="SelectedOfferDetails">
+        <parameter name="data" typeRef="java.lang.Integer" isList="false"/>
+        <return typeRef="FinGenieSelectedOfferDetailsrtnType" isList="false"/>
+    </operation>
     <dataobjects>
+        <dataobject javaType="FinGenieExecuteHomeLoansrtnType">
+            <element name="ANNUAL FEE" typeRef="java.lang.Integer"/>
+            <element name="BANK_ID" typeRef="java.lang.Integer"/>
+            <element name="BANK_NAME" typeRef="java.lang.String"/>
+            <element name="DOWNPAYMENT" typeRef="java.lang.Float"/>
+            <element name="ICONURL" typeRef="java.lang.String"/>
+            <element name="MAX_AMOUNT" typeRef="java.math.BigInteger"/>
+            <element name="MAX_TENURE" typeRef="java.lang.Integer"/>
+            <element name="MIN_AMOUNT" typeRef="java.lang.Integer"/>
+            <element name="MIN_INT" typeRef="java.lang.Double"/>
+            <element name="MIN_TENURE" typeRef="java.lang.Integer"/>
+            <element name="OFFER_ACTIVE" typeRef="java.lang.Boolean"/>
+            <element name="OFFER_END_DATE" typeRef="java.lang.String"/>
+            <element name="OFFER_ID" typeRef="java.lang.Integer"/>
+            <element name="OFFER_START_DATE" typeRef="java.lang.String"/>
+            <element name="OFFER_TYPE_ID" typeRef="java.lang.Integer"/>
+            <element name="ORIGINATION_FEE" typeRef="java.lang.String"/>
+            <element name="PRE_PAYMENT_PENALTY" typeRef="java.lang.Boolean"/>
+            <element name="RATING" typeRef="java.lang.Integer"/>
+        </dataobject>
+        <dataobject javaType="FinGenieSelectedOfferDetailsrtnType">
+            <element name="ANNUAL FEE" typeRef="java.lang.Integer"/>
+            <element name="BANK_ID" typeRef="java.lang.Integer"/>
+            <element name="BANK_NAME" typeRef="java.lang.String"/>
+            <element name="DOWNPAYMENT" typeRef="java.lang.Float"/>
+            <element name="ICONURL" typeRef="java.lang.String"/>
+            <element name="MAX_AMOUNT" typeRef="java.math.BigInteger"/>
+            <element name="MAX_TENURE" typeRef="java.lang.Integer"/>
+            <element name="MIN_AMOUNT" typeRef="java.lang.Integer"/>
+            <element name="MIN_INT" typeRef="java.lang.Double"/>
+            <element name="MIN_TENURE" typeRef="java.lang.Integer"/>
+            <element name="OFFER_ACTIVE" typeRef="java.lang.Boolean"/>
+            <element name="OFFER_END_DATE" typeRef="java.lang.String"/>
+            <element name="OFFER_ID" typeRef="java.lang.Integer"/>
+            <element name="OFFER_START_DATE" typeRef="java.lang.String"/>
+            <element name="OFFER_TYPE_ID" typeRef="java.lang.Integer"/>
+            <element name="ORIGINATION_FEE" typeRef="java.lang.String"/>
+            <element name="PRE_PAYMENT_PENALTY" typeRef="java.lang.Boolean"/>
+            <element name="RATING" typeRef="java.lang.Integer"/>
+        </dataobject>
         <dataobject javaType="com.wavemaker.apps.mobile.fingenie.fingenie.Bank">
             <element name="bankId" typeRef="java.lang.Integer" allowNull="true"/>
             <element name="bankName" typeRef="java.lang.String" allowNull="true"/>
             <element name="email" typeRef="java.lang.String" allowNull="true"/>
+            <element name="iconurl" typeRef="java.lang.String" allowNull="true"/>
             <element name="lastUpdated" typeRef="java.util.Date" allowNull="true"/>
             <element name="offers" typeRef="com.wavemaker.apps.mobile.fingenie.fingenie.Offer" isList="true" allowNull="true"/>
-            <element name="phoneNum" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="phoneNum" typeRef="java.lang.Long" allowNull="true"/>
         </dataobject>
         <dataobject javaType="com.wavemaker.apps.mobile.fingenie.fingenie.Offer">
-            <element name="amount" typeRef="java.lang.Integer" allowNull="true"/>
             <element name="annualFee" typeRef="java.lang.Integer" allowNull="true"/>
             <element name="bank" typeRef="com.wavemaker.apps.mobile.fingenie.fingenie.Bank" allowNull="true"/>
             <element name="bankId" typeRef="java.lang.Integer" allowNull="true"/>
             <element name="downpayment" typeRef="java.lang.Float" allowNull="true"/>
-            <element name="minInt" typeRef="java.lang.Float" allowNull="true"/>
+            <element name="maxAmount" typeRef="java.lang.Long" allowNull="true"/>
+            <element name="maxTenure" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="minAmount" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="minInt" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="minTenure" typeRef="java.lang.Integer" allowNull="true"/>
             <element name="offerActive" typeRef="java.lang.Boolean" allowNull="true"/>
-            <element name="offerEndDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="offerEndDate" typeRef="java.util.Date" allowNull="true"/>
             <element name="offerFeedbacks" typeRef="com.wavemaker.apps.mobile.fingenie.fingenie.OfferFeedback" isList="true" allowNull="true"/>
             <element name="offerId" typeRef="java.lang.Integer" allowNull="true"/>
-            <element name="offerStartDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="offerStartDate" typeRef="java.util.Date" allowNull="true"/>
             <element name="offerType" typeRef="com.wavemaker.apps.mobile.fingenie.fingenie.OfferType" allowNull="true"/>
             <element name="offerTypeId" typeRef="java.lang.Integer" allowNull="true"/>
             <element name="originationFee" typeRef="java.lang.String" allowNull="true"/>
             <element name="prePaymentPenalty" typeRef="java.lang.Boolean" allowNull="true"/>
             <element name="rating" typeRef="java.lang.Integer" allowNull="true"/>
-            <element name="tenure" typeRef="java.lang.Integer" allowNull="true"/>
         </dataobject>
         <dataobject javaType="com.wavemaker.apps.mobile.fingenie.fingenie.OfferFeedback">
             <element name="feedback" typeRef="java.lang.String" allowNull="true"/>

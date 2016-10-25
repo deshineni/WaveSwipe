@@ -33,6 +33,21 @@ public class FinGenieQueryExecutorServiceImpl implements FinGenieQueryExecutorSe
 	@Qualifier("FinGenieWMQueryExecutor")
 	private WMQueryExecutor queryExecutor;
 
+	@Transactional(value = "FinGenieTransactionManager")
+	@Override
+	public Page<Object> executeExecuteHomeLoans(Pageable pageable)
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        return queryExecutor.executeNamedQuery("ExecuteHomeLoans", params, pageable);
+	}
+	@Transactional(value = "FinGenieTransactionManager")
+	@Override
+	public Page<Object> executeSelectedOfferDetails(Pageable pageable, java.lang.Integer data)
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("data", data);
+        return queryExecutor.executeNamedQuery("SelectedOfferDetails", params, pageable);
+	}
 
 	@Transactional(value = "FinGenieTransactionManager")
 	@Override

@@ -40,6 +40,26 @@ public class QueryExecutionController {
     @Autowired
     private FinGenieQueryExecutorService queryService;
 
+    @ApiOperation(value = "Process request to execute queries")
+    @RequestMapping(value = "/queries/ExecuteHomeLoans", method = RequestMethod.GET)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    public Page<Object> executeExecuteHomeLoans(Pageable pageable) {
+        LOGGER.debug("Executing named query ExecuteHomeLoans");
+        Page<Object> result = queryService.executeExecuteHomeLoans(pageable);
+        LOGGER.debug("got the result of named query {}", result);
+        return result;
+    }
+
+    @ApiOperation(value = "Process request to execute queries")
+    @RequestMapping(value = "/queries/SelectedOfferDetails", method = RequestMethod.GET)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    public Page<Object> executeSelectedOfferDetails(@RequestParam(value = "data", required = false) java.lang.Integer data, Pageable pageable) throws QueryParameterMismatchException {
+        LOGGER.debug("Executing named query SelectedOfferDetails");
+        Page<Object> result = queryService.executeSelectedOfferDetails(pageable, data);
+        LOGGER.debug("got the result of named query {}", result);
+        return result;
+    }
+
     @ApiOperation(value = "Process request to execute customer queries")
     @RequestMapping(value = "/queries/wm_custom", method = RequestMethod.POST)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)

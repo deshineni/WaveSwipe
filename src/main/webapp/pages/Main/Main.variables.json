@@ -20,7 +20,7 @@
     "category" : "wm.NavigationVariable",
     "dataBinding" : [ {
       "target" : "pageName",
-      "value" : "Departments",
+      "value" : "HomeLoanOffers",
       "type" : "list"
     } ],
     "operation" : "gotoPage",

@@ -1,3 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<hibernate-mapping/>
+<hibernate-mapping>
+  <sql-query name="ExecuteHomeLoans">
+    <![CDATA[
+      SELECT a.*, b.BANK_NAME, b.ICONURL
+      FROM OFFER a
+      JOIN BANK b
+      ON a.BANK_ID = b.BANK_ID
+      WHERE OFFER_TYPE_ID = 1
+    ]]>
+  </sql-query>
+  <sql-query name="SelectedOfferDetails">
+    <![CDATA[
+      SELECT a.*, b.BANK_NAME, b.ICONURL
+      FROM OFFER a
+      JOIN BANK b
+      ON a.BANK_ID = b.BANK_ID
+      WHERE OFFER_ID = :data
+    ]]>
+  </sql-query>
+</hibernate-mapping>

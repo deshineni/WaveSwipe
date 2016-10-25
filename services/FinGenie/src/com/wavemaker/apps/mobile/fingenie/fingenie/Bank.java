@@ -33,9 +33,10 @@ public class Bank implements Serializable {
 
     private Integer bankId;
     private String bankName;
-    private Integer phoneNum;
+    private Long phoneNum;
     private String email;
     private Date lastUpdated;
+    private String iconurl;
     private List<Offer> offers = new ArrayList<>();
 
     @Id
@@ -58,12 +59,12 @@ public class Bank implements Serializable {
         this.bankName = bankName;
     }
 
-    @Column(name = "`PHONE_NUM`", nullable = true, scale = 0, precision = 10)
-    public Integer getPhoneNum() {
+    @Column(name = "`PHONE_NUM`", nullable = true, scale = 0, precision = 20)
+    public Long getPhoneNum() {
         return this.phoneNum;
     }
 
-    public void setPhoneNum(Integer phoneNum) {
+    public void setPhoneNum(Long phoneNum) {
         this.phoneNum = phoneNum;
     }
 
@@ -84,6 +85,15 @@ public class Bank implements Serializable {
 
     public void setLastUpdated(Date lastUpdated) {
         this.lastUpdated = lastUpdated;
+    }
+
+    @Column(name = "`ICONURL`", nullable = true, length = 255)
+    public String getIconurl() {
+        return this.iconurl;
+    }
+
+    public void setIconurl(String iconurl) {
+        this.iconurl = iconurl;
     }
 
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "bank")

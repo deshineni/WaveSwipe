@@ -120,8 +120,9 @@ public class OfferController {
         return offerService.count(query);
     }
 
-    @RequestMapping(value = "/{id:.+}/offerFeedbacks", method = RequestMethod.GET)
+    @RequestMapping(value = "/{id}/offerFeedbacks", method = RequestMethod.GET)
     @ApiOperation(value = "Gets the offerFeedbacks instance associated with the given id.")
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
     public Page<OfferFeedback> findAssociatedOfferFeedbacks(@PathVariable("id") Integer id, Pageable pageable) {
         LOGGER.debug("Fetching all associated offerFeedbacks");
         return offerService.findAssociatedOfferFeedbacks(id, pageable);

@@ -1,5 +1,72 @@
 {
   "name" : "FinGenie",
   "description" : "Queries for FinGenie",
-  "queries" : [ ]
+  "queries" : [ {
+    "name" : "ExecuteHomeLoans",
+    "query" : "SELECT a.*, b.BANK_NAME, b.ICONURL \nFROM OFFER a \nJOIN BANK b\nON a.BANK_ID = b.BANK_ID\nWHERE OFFER_TYPE_ID = 1",
+    "comment" : "select all home loan offers",
+    "description" : null,
+    "nativeSql" : true,
+    "returnsSingleResult" : false,
+    "update" : false,
+    "queryParams" : [ ],
+    "outputType" : "FinGenieExecuteHomeLoansrtnType",
+    "returnTypeMetadata" : {
+      "ANNUAL FEE" : "java.lang.Integer",
+      "BANK_ID" : "java.lang.Integer",
+      "BANK_NAME" : "java.lang.String",
+      "DOWNPAYMENT" : "java.lang.Float",
+      "ICONURL" : "java.lang.String",
+      "MAX_AMOUNT" : "java.math.BigInteger",
+      "MAX_TENURE" : "java.lang.Integer",
+      "MIN_AMOUNT" : "java.lang.Integer",
+      "MIN_INT" : "java.lang.Double",
+      "MIN_TENURE" : "java.lang.Integer",
+      "OFFER_ACTIVE" : "java.lang.Boolean",
+      "OFFER_END_DATE" : "java.lang.String",
+      "OFFER_ID" : "java.lang.Integer",
+      "OFFER_START_DATE" : "java.lang.String",
+      "OFFER_TYPE_ID" : "java.lang.Integer",
+      "ORIGINATION_FEE" : "java.lang.String",
+      "PRE_PAYMENT_PENALTY" : "java.lang.Boolean",
+      "RATING" : "java.lang.Integer"
+    }
+  }, {
+    "name" : "SelectedOfferDetails",
+    "query" : "SELECT a.*, b.BANK_NAME, b.ICONURL \nFROM OFFER a \nJOIN BANK b\nON a.BANK_ID = b.BANK_ID\nWHERE OFFER_ID = :data",
+    "comment" : "Get all offer details",
+    "description" : null,
+    "nativeSql" : true,
+    "returnsSingleResult" : false,
+    "update" : false,
+    "queryParams" : [ {
+      "paramName" : "data",
+      "paramType" : "java.lang.Integer",
+      "testValue" : "1",
+      "systemParamName" : null,
+      "systemParam" : false,
+      "list" : false
+    } ],
+    "outputType" : "FinGenieSelectedOfferDetailsrtnType",
+    "returnTypeMetadata" : {
+      "ANNUAL FEE" : "java.lang.Integer",
+      "BANK_ID" : "java.lang.Integer",
+      "BANK_NAME" : "java.lang.String",
+      "DOWNPAYMENT" : "java.lang.Float",
+      "ICONURL" : "java.lang.String",
+      "MAX_AMOUNT" : "java.math.BigInteger",
+      "MAX_TENURE" : "java.lang.Integer",
+      "MIN_AMOUNT" : "java.lang.Integer",
+      "MIN_INT" : "java.lang.Double",
+      "MIN_TENURE" : "java.lang.Integer",
+      "OFFER_ACTIVE" : "java.lang.Boolean",
+      "OFFER_END_DATE" : "java.lang.String",
+      "OFFER_ID" : "java.lang.Integer",
+      "OFFER_START_DATE" : "java.lang.String",
+      "OFFER_TYPE_ID" : "java.lang.Integer",
+      "ORIGINATION_FEE" : "java.lang.String",
+      "PRE_PAYMENT_PENALTY" : "java.lang.Boolean",
+      "RATING" : "java.lang.Integer"
+    }
+  } ]
 }

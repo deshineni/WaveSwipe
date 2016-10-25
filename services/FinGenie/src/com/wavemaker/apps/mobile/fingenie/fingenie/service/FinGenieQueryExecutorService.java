@@ -16,6 +16,8 @@ import com.wavemaker.runtime.data.model.CustomQuery;
 import com.wavemaker.runtime.data.exception.QueryParameterMismatchException;
 
 public interface FinGenieQueryExecutorService {
+    Page<Object> executeExecuteHomeLoans(Pageable pageable) throws QueryParameterMismatchException;
+    Page<Object> executeSelectedOfferDetails(Pageable pageable, java.lang.Integer data) throws QueryParameterMismatchException;
 
 	
 	Page<Object> executeWMCustomQuerySelect(CustomQuery query, Pageable pageable) ;
