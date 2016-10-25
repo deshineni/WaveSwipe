@@ -5,7 +5,7 @@
     </wm-mobile-navbar> 
     <wm-content name="content1"> 
         <wm-page-content columnwidth="12" name="page_content1"> 
-            <wm-livelist listclass="list-group" itemclass="list-group-item" name="EmployeeLivelist" selectfirstitem="false" on-click="Variables.GoogleapisInvoke.invoke();Variables.goToPage_EmployeesProfile.invoke()" dataset="bind:Variables.HrdbEmployeeData.dataSet"> 
+            <wm-livelist listclass="list-group" itemclass="list-group-item" name="EmployeeLivelist" selectfirstitem="false" on-click="Variables.GoogleapisInvoke.invoke();Variables.goToPage_OfferDetails.invoke()" dataset="bind:Variables.HrdbEmployeeData.dataSet"> 
                 <wm-listtemplate layout="media" name="listtemplate2"> 
                     <wm-container class="media-left" name="container2"> 
                         <wm-picture class="media-object picture" width="40pt" picturesource="bind:Variables.HrdbEmployeeData.dataSet.data[$i].picurl" name="picture1"></wm-picture> 

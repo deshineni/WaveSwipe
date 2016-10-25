@@ -501,21 +501,6 @@
     "operation" : "gotoPage",
     "pageName" : "Employees"
   },
-  "goToPage_EmployeesProfile" : {
-    "_id" : "wm-goToPage_EmployeesProfile-wm.NavigationVariable-1442984505227",
-    "name" : "goToPage_EmployeesProfile",
-    "owner" : "App",
-    "category" : "wm.NavigationVariable",
-    "dataBinding" : [ {
-      "target" : "pageName",
-      "value" : "EmployeesProfile",
-      "type" : "list"
-    } ],
-    "operation" : "gotoPage",
-    "pageName" : "EmployeesProfile",
-    "dataSet" : [ ],
-    "pageTransitions" : "none"
-  },
   "goToPage_HomeLoanOffers" : {
     "_id" : "wm-goToPage_Departments-wm.NavigationVariable-1442984475932",
     "name" : "goToPage_HomeLoanOffers",
@@ -523,11 +508,11 @@
     "category" : "wm.NavigationVariable",
     "dataBinding" : [ {
       "target" : "pageName",
-      "value" : "Departments",
+      "value" : "HomeLoanOffers",
       "type" : "list"
     } ],
     "operation" : "gotoPage",
-    "pageName" : "Departments",
+    "pageName" : "HomeLoanOffers",
     "dataSet" : [ ],
     "pageTransitions" : "none"
   },
@@ -542,6 +527,21 @@
     "dataSet" : [ ],
     "pageTransitions" : "none"
   },
+  "goToPage_OfferDetails" : {
+    "_id" : "wm-goToPage_EmployeesProfile-wm.NavigationVariable-1442984505227",
+    "name" : "goToPage_OfferDetails",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ {
+      "target" : "pageName",
+      "value" : "EmployeesProfile",
+      "type" : "list"
+    } ],
+    "operation" : "gotoPage",
+    "pageName" : "EmployeesProfile",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
   "goToPage_PersonalLoanOffers" : {
     "_id" : "wm-goToPage_PersonalLoanOffers-wm.NavigationVariable-1477381568665",
     "name" : "goToPage_PersonalLoanOffers",
@@ -549,7 +549,7 @@
     "category" : "wm.NavigationVariable",
     "dataBinding" : [ {
       "target" : "pageName",
-      "value" : "HomeLoanOffers",
+      "value" : "PersonalLoanOffers",
       "type" : "list"
     } ],
     "operation" : "gotoPage",
