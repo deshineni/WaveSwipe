@@ -49,6 +49,7 @@ public class Offer implements Serializable {
     private Integer maxTenure;
     private Date offerEndDate;
     private Date offerStartDate;
+    private String fixedFloating;
     private List<OfferFeedback> offerFeedbacks = new ArrayList<>();
     private Bank bank;
     private OfferType offerType;
@@ -199,6 +200,15 @@ public class Offer implements Serializable {
 
     public void setOfferStartDate(Date offerStartDate) {
         this.offerStartDate = offerStartDate;
+    }
+
+    @Column(name = "`FIXED_FLOATING`", nullable = true, length = 255)
+    public String getFixedFloating() {
+        return this.fixedFloating;
+    }
+
+    public void setFixedFloating(String fixedFloating) {
+        this.fixedFloating = fixedFloating;
     }
 
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "offer")

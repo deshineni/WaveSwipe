@@ -9,7 +9,7 @@
     </operation>
     <operation operationType="nativequery" name="SelectedOfferDetails">
         <parameter name="data" typeRef="java.lang.Integer" isList="false"/>
-        <return isList="false"/>
+        <return typeRef="FinGenieSelectedOfferDetailsrtnType" isList="false"/>
     </operation>
     <operation operationType="nativequery" name="ExecuteHomeLoans">
         <return typeRef="FinGenieExecuteHomeLoansrtnType" isList="false"/>
@@ -73,6 +73,7 @@
             <element name="bank" typeRef="com.wavemaker.apps.mobile.fingenie.fingenie.Bank" allowNull="true"/>
             <element name="bankId" typeRef="java.lang.Integer" allowNull="true"/>
             <element name="downpayment" typeRef="java.lang.Float" allowNull="true"/>
+            <element name="fixedFloating" typeRef="java.lang.String" allowNull="true"/>
             <element name="maxAmount" typeRef="java.lang.Long" allowNull="true"/>
             <element name="maxTenure" typeRef="java.lang.Integer" allowNull="true"/>
             <element name="minAmount" typeRef="java.lang.Integer" allowNull="true"/>

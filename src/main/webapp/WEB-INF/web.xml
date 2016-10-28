@@ -200,10 +200,6 @@
     <filter>
         <filter-name>springSecurityFilterChain</filter-name>
         <filter-class>com.wavemaker.runtime.filter.WMSecurityFilter</filter-class>
-        <init-param>
-            <param-name>runMode</param-name>
-            <param-value>${runMode}</param-value>
-        </init-param>
     </filter>
 
     <filter-mapping>

@@ -369,6 +369,19 @@
         "isRelated" : false,
         "defaultValue" : "",
         "scale" : 0
+      }, {
+        "fieldName" : "fixedFloating",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "FIXED_FLOATING",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 255,
+        "precision" : 19,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "defaultValue" : "",
+        "scale" : 0
       } ],
       "entityName" : "Offer",
       "fullyQualifiedName" : "com.wavemaker.apps.mobile.fingenie.fingenie.Offer",

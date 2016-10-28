@@ -1,1 +1,26 @@
-{ }
+{
+  "FinGenieExecuteSelectedOfferDetails" : {
+    "_id" : "wm-FinGenieExecuteSelectedOfferDetails-wm.ServiceVariable-1477454838274",
+    "name" : "FinGenieExecuteSelectedOfferDetails",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "FinGenieSelectedOfferDetailsrtnType",
+    "service" : "FinGenie",
+    "operation" : "executeSelectedOfferDetails",
+    "operationId" : "QueryExecutionController_executeSelectedOfferDetails",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "QueryExecution"
+  }
+}
